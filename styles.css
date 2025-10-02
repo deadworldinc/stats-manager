@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 315px;
+  border-radius: 20px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.default-text {
+    font-size: 14px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper div {
+    padding: 15px;
+    min-width: 300px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #73ffcd, #aeff6f);
+    color: black;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    transition-duration: 250ms;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, .5),
+        rgba(255, 255, 255, 0) 80%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 5s infinite linear; /* Animation */
+    /* border-image: linear-gradient(90deg, transparent 20%, white, transparent 80%) 1;
+    border-style: solid;
+    border-width: 2px;
+    border-inline: none;
+    height: 36px; */
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
